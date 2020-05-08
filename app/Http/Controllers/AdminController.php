@@ -37,35 +37,38 @@ class AdminController extends Controller
     public function login_dashboard(Request $request){
 
 
-  // $email=$request->admin_email;
-  // $password=md5($request->admin_password);
-  // $result=DB::table('admin')
-  // ->where('admin_email', $email)
-  // ->where('admin_password', $password)
-  // ->first();
+//  $email=$request->admin_email;
+//     $password=md5($request->admin_password);
+//    $result=DB::table('admin')
+//    ->where('admin_email', $email)
+//    ->where('admin_password', $password)
+//   ->first();
   
 
-  // if($result){
+//   if($result){
 
 
       
-  //     Session::put('admin_email',$result->admin_email);
-  //     Session::put('admin_id', $result->admin_id);
-       return Redirect::to('admin_dashboard');
+    // Session::put('admin_email',$result->admin_email);
+    //  Session::put('admin_id', $result->admin_id);
+      return Redirect::to('admin_dashboard');
    
 
      
-  }
+  // }
 
-    // else{
+  //  else{
 
-    //    return Redirect::to('/backend');
+  //      return Redirect::to('/backend');
 
-    // }
+  //   }
   
        
 
-// }
+
+
+}
+
 }
 
 

@@ -32,6 +32,7 @@ class AllstudentsController extends Controller
        
 
     }
+    
      // delete student
 
     public function studentdelete($student_id){

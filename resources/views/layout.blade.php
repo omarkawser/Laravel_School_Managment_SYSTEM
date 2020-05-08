@@ -230,27 +230,48 @@
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#layoutsSubmenu" aria-expanded="false" aria-controls="layoutsSubmenu">
-                <i class="mdi mdi-arrow-expand-all menu-icon"></i>
-                <span class="menu-title">Student information</span>
+        
+           
+
+                <!-- Teacher start -->
+
+
+  
+                <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#advancedSubmenu" aria-expanded="false" aria-controls="advancedSubmenu">
+                <i class="mdi mdi-repeat menu-icon"></i>
+                <span class="menu-title">Teacher</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
-
-
-              <div class="collapse" id="layoutsSubmenu">
+              <div class="collapse" id="advancedSubmenu">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/tutionfee')}}">tution fee</a>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addteacher')}}">Add  Teacher</a>
                   </li>
+
                   <li class="nav-item">
-                    <a class="nav-link" href="pages/layout/rtl-layout.html">Result </a>
+                    <a class="nav-link" href="{{URL::to('/allteacher')}}">All Teacher</a>
                   </li>
+  
                 </ul>
               </div>
-
-
             </li>
+            <li class="nav-item">
+              
+            </li>
+
+
+
+
+
+                <!-- teacher end -->
+   
+                           <!-- ADD STAFF  -->
+
+
+                           <!-- <li class="nav-item"> -->
+
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#sidebar_layouts" aria-expanded="false" aria-controls="sidebar_layouts">
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>
@@ -277,9 +298,224 @@
                 </ul>
               </div>
             </li>
+
+                
+
+
+                                      <!-- EXAM   Start -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#layoutsSubmenu" aria-expanded="false" aria-controls="layoutsSubmenu">
+                <i class="mdi mdi-arrow-expand-all menu-icon"></i>
+                <span class="menu-title">Exam</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+
+
+              <div class="collapse" id="layoutsSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/view_exam')}}">View exam</a>
+                  </li>  <a class="nav-link" href="{{URL::to('/set_exam')}}">Set Exam</a>
+                  </li>
+                  
+                </ul>
+              </div>
+            </li>
+
+                     <!-- EXAM END -->
+          
+
+
             <!--main pages end-->
             <!--sample pages start-->
-            
+                                          <!-- STAFF START -->
+
+
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#authSubmenu" aria-expanded="false" aria-controls="authSubmenu">
+                <i class="mdi mdi-lock-outline menu-icon"></i>
+                <span class="menu-title">STAFF</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="authSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/login.html">
+                      ADD STAFF
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/login-2.html">
+                      View STAFF
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+                  
+                  <!-- STAFF END -->
+
+
+                                       <!-- Library   START -->
+      
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
+                <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                <span class="menu-title"> Library</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a> 
+              <div class="collapse" id="errorSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addbook')}}">  Add Book  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/showbook')}}"> Book Show    </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/issue_book')}}">
+                     Issue Book
+                    </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/issued_book')}}">
+                    Issued Book
+                    </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/return_book')}}">
+                    Return   Book
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+
+                           <!-- Library   END -->
+
+
+
+                           <!-- Account Department  start -->
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#generalSubmenu" aria-expanded="false" aria-controls="generalSubmenu">
+                <i class="mdi mdi-google-pages menu-icon"></i>
+                <span class="menu-title">Account Department</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="generalSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addexpense')}}">
+                    Add Expense
+                    </a>
+                  </li>
+                     
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/accountdashboard')}}">
+                      Account Dashboard 
+                    </a>
+                  </li>
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/showexpense')}}">
+                      Show Expense
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/editexpense')}}">
+                     Optional Edit expense 
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/faq.html">
+                      FAQ
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/faq-2.html">
+                      FAQ 2
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/news-grid.html">
+                      News grid
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/portfolio-1.html">
+                      Portfolio 1
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/portfolio-2.html">
+                      Portfolio 2
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/search-results.html">
+                      Search result
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/timeline.html">
+                      Timeline
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+
+
+
+
+
+
+
+
+                                <br>  </br>
+
+
+
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ecommerceSubmenu" aria-expanded="false" aria-controls="ecommerceSubmenu">
+                <i class="mdi mdi-cart-outline menu-icon"></i>
+                <span class="menu-title">E-commerce</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ecommerceSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/pricing.html">
+                      Pricing
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/invoice.html">
+                      Invoice
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="samples/orders.html">
+                      Orders
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <!--sample pages end-->
             <!--ui features start-->
            
@@ -288,7 +524,17 @@
            
             <!--data rep end-->
             <!--forms start-->
-       
+
+
+
+
+
+
+
+
+
+
+<!--        
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#advancedSubmenu" aria-expanded="false" aria-controls="advancedSubmenu">
                 <i class="mdi mdi-repeat menu-icon"></i>
@@ -297,26 +543,24 @@
               </a>
               <div class="collapse" id="advancedSubmenu">
                 <ul class="nav flex-column sub-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addteacher')}}">Add  Teacher</a>
+                  </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="{{URL::to('/allteacher')}}">All Teacher</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/form-picker.html">Form Picker</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/bt-select-splitter.html">Splitter</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="pages/forms/icheck.html">Icheck</a>
-                  </li>
+  
                 </ul>
               </div>
             </li>
             <li class="nav-item">
               
-            </li>
+            </li> -->
           
     
+         
 
             <!--forms end-->
             <!--Apps start-->
@@ -327,8 +571,21 @@
                 <i class="mdi mdi-file-document-box menu-icon"></i>
                 <span class="menu-title">Documentation</span>
               </a>
+                   
+
+
+              
+
+
+
             </li>
           </ul>
+
+
+
+
+
+
         </nav>
         <!-- partial -->
         <div class="content-wrapper">
@@ -379,17 +636,20 @@
   <script src="{{asset('/node_modules/chartist-plugin-legend/chartist-plugin-legend.js')}} "></script>
   <script src="{{asset('/node_modules/chart.js/dist/Chart.min.js')}} "></script>
   <script src="{{asset('/node_modules/jquery-sparkline/jquery.sparkline.min.js')}} "></script>
+  <script src="{{asset('/bower_components/jsgrid/dist/jsgrid.min.js')}} "></script>
   <!-- End plugin js for this page-->
   <!-- inject:js -->
-  <script src="{{asset('js/off-canvas.js')}} "></script>
-  <script src="{{asset('js/hoverable-collapse.js')}} "></script>
-  <script src="{{asset('js/misc.js')}} "></script>
-  <script src="{{asset('js/settings.js')}} "></script>
+  <script src="{{asset('/js/off-canvas.js')}} "></script>
+  <script src="{{asset('/js/hoverable-collapse.js')}} "></script>
+  <script src="{{asset('/js/misc.js')}} "></script>
+  <script src="{{asset('/js/settings.js')}} "></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="{{asset('js/dashboard_1.js')}} "></script>
+  <script src="{{asset('/js/dashboard_1.js')}} "></script>
   <!-- End custom js for this page-->
 
+
+  <script src="{{asset('/js/js-grid.js')}}"></script>
 
  <!-- show delete alert box -->
 

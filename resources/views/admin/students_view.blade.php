@@ -12,7 +12,14 @@
             <div class="col-lg-12 side-left">
               <div class="card mb-6">
                 <div class="card-body avatar">
-                  <h2 class="card-title">Info</h2>
+                  <h2 class="card-title">Student Info</h2>
+
+                     <!-- pdf create  -->
+                  <div  class="col-lg-50 side-right"   >   <button class="btn btn-success"> pdf  </button> 
+         
+                  
+                     </div>
+
                  <!-- <a href="">  <img src="http://via.placeholder.com/47x47" alt=""> </a> -->
                   <img src="{{URL::to($stu_info_view->student_image)}}" alt="">
                   <p class="name"> {{$stu_info_view->student_name}}</p>
@@ -75,3 +82,7 @@
 
 
 @endsection
+
+
+
+

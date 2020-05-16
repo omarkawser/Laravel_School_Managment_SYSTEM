@@ -162,6 +162,14 @@
                   <img src="http://via.placeholder.com/47x47" alt="">
                   <span class="badge badge-success">&nbsp;</span>
                 </div>
+
+
+
+                <a class="dropdown-item" href="{{URL::to('/viewprofile')}}">
+                <div class="sender-img">
+                  <img src="http://via.placeholder.com/47x47" alt="">
+                 
+                </div>
                 <div class="sender">
                   <p class="Sende-name">View Profile</p>
                 
@@ -186,26 +194,7 @@
                 <div class="sender">
                   <p class="Sende-name">Log Out</p>
                 </div>
-              </a> 
-
-                
-
-              <!-- <div class="dropdown-item" >
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            </div>
- -->
-
-
-
-
+              </a>
              
 
 
@@ -349,11 +338,84 @@
 
             <!--main pages end-->
             <!--sample pages start-->
-                                          <!-- STAFF START -->
+                 
 
-
-
+                                       <!-- Library   START -->
+      
             <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
+                <i class="mdi mdi-alert-circle-outline menu-icon"></i>
+                <span class="menu-title"> Library</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a> 
+              <div class="collapse" id="errorSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addbook')}}">  Add Book  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/showbook')}}"> Book Show    </a>
+                  </li>
+
+
+                 
+
+            
+
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/return_book')}}">
+                    Return   Book
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+
+                           <!-- Library   END -->
+
+
+
+                           <!-- Account Department  start -->
+      
+                           <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#generalSubmenu" aria-expanded="false" aria-controls="generalSubmenu">
+                <i class="mdi mdi-google-pages menu-icon"></i>
+                <span class="menu-title">Account Department</span>
+                <i class="mdi mdi-chevron-down menu-arrow"></i>
+              </a>
+              <div class="collapse" id="generalSubmenu">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/addexpense')}}">
+                    Add Expense
+                    </a>
+                  </li>
+                     
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{URL::to('/accountdashboard')}}">
+                      Account Dashboard 
+                    </a>
+                  </li>
+
+
+                
+                 
+                  
+    
+                </ul>
+              </div>
+            </li>
+
+
+
+
+                                    <!-- STAFF START -->
+
+
+
+                                    <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#authSubmenu" aria-expanded="false" aria-controls="authSubmenu">
                 <i class="mdi mdi-lock-outline menu-icon"></i>
                 <span class="menu-title">STAFF</span>
@@ -379,100 +441,6 @@
                   <!-- STAFF END -->
 
 
-                                       <!-- Library   START -->
-      
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#errorSubmenu" aria-expanded="false" aria-controls="errorSubmenu">
-                <i class="mdi mdi-alert-circle-outline menu-icon"></i>
-                <span class="menu-title"> Library</span>
-                <i class="mdi mdi-chevron-down menu-arrow"></i>
-              </a> 
-              <div class="collapse" id="errorSubmenu">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/addbook')}}">  Add Book  </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/showbook')}}"> Book Show    </a>
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/issue_book')}}">
-                     Issue Book
-                    </a>
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/issued_book')}}">
-                    Issued Book
-                    </a>
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/return_book')}}">
-                    Return   Book
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-
-                           <!-- Library   END -->
-
-
-
-                           <!-- Account Department  start -->
-
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#generalSubmenu" aria-expanded="false" aria-controls="generalSubmenu">
-                <i class="mdi mdi-google-pages menu-icon"></i>
-                <span class="menu-title">Account Department</span>
-                <i class="mdi mdi-chevron-down menu-arrow"></i>
-              </a>
-              <div class="collapse" id="generalSubmenu">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/addexpense')}}">
-                    Add Expense
-                    </a>
-                  </li>
-                     
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/accountdashboard')}}">
-                      Account Dashboard 
-                    </a>
-                  </li>
-
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/showexpense')}}">
-                      Show Expense
-                    </a>
-                  </li>
-                  
-              
-                  
-                  
-                  
-                  
-                  
-                </ul>
-              </div>
-            </li>
-
-
-
-
-
-
-
-
-
-                                <br>  </br>
 
 
 
@@ -504,11 +472,9 @@
               </a>
               <div class="collapse" id="advancedSubmenu">
                 <ul class="nav flex-column sub-menu">
-
                 <li class="nav-item">
                     <a class="nav-link" href="{{URL::to('/addteacher')}}">Add  Teacher</a>
                   </li>
-
                   <li class="nav-item">
                     <a class="nav-link" href="{{URL::to('/allteacher')}}">All Teacher</a>
                   </li>
@@ -523,23 +489,13 @@
     
          
 
+
             <!--forms end-->
             <!--Apps start-->
           
             <!--Apps end-->
             <li class="nav-item">
-              <a class="nav-link" href="pages/documentation.html">
-                <i class="mdi mdi-file-document-box menu-icon"></i>
-                <span class="menu-title">Documentation</span>
-              </a>
-                   
-
-
-              
-
-
-
-            </li>
+           
           </ul>
 
 
@@ -615,23 +571,17 @@
  <!-- show delete alert box -->
 
 <!-- <script type="text/javascript"  src="{{asset('htpp://cdnjs.cloudflare.com/ajax/lbs/bootbox.js/4.4.0/bootbox.min.js')}}"></script>
-
 <script>
    
    s(document).on("click", "#delete", function(e){
-
       e.preventDefault();
       var link= $(this).attr("href");
       bootbox.confirm("are you want to delete", function(confirmed){
-
         if(confirmed){
            window.location.href=link;
         };
-
       } );
-
    } );
-
 </script> -->
 
 

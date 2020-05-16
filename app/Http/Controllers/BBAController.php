@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 
 class BBAController extends Controller
@@ -22,4 +23,18 @@ class BBAController extends Controller
         
  
      }
+
+
+
+     public function delete_bba($student_id){
+
+    
+          DB::table('students_tbl')
+                       ->where('student_id',  $student_id)
+                        ->delete();
+  
+            return Redirect::to('/bba');      
+  
+     }
+  
 }

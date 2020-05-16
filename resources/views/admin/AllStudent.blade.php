@@ -52,6 +52,7 @@
                           <td>{{$view_student->student_address}}</td>
                           <td>{{$view_student->student_department}} </td>
                           
+                          
                           <td>
                           <a href="{{URL::to('/viewstudent/'.$view_student->student_id )}}">  <button class="btn btn-outline-primary">View</button></a>
                          <a href="{{URL::to('/edit_student/'.$view_student->student_id )}}">  <button class="btn btn-outline-warning">Update</button> </a> 

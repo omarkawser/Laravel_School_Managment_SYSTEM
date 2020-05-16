@@ -29,11 +29,24 @@ Route::get('/backend', function () {
 
 
 
+// Route::post('/adminlogin', 'LoginController@adminLogin');
+// Route::get('/admin_dashboard', 'LoginController@admin_dashboard');
+// Route::get('/setting', 'SettingController@setting');
+// Route::get('/viewprofile',  'ViewProfileController@view');
+
+
+
+Route::post('/adminlogin','AdminController@login_dashboard');
+Route::get('/admin_dashboard','AdminController@admin_dashboard');
+
+
 //admin profile
-Route::post('/adminlogin', 'AdminController@login_dashboard');
-Route::get('/admin_dashboard', 'AdminController@admin_dashboard');
-Route::get('/setting', 'SettingController@setting');
-Route::get('/viewprofile',  'ViewProfileController@view');
+
+
+
+
+ Route::get('/setting', 'SettingController@setting');
+ Route::get('/viewprofile',  'ViewProfileController@view');
 
 
 
@@ -65,6 +78,18 @@ Route::get('//addteacher', 'TeacherController@addTeacher');
 Route::post('/save_teacher', 'TeacherController@saveteacher');
 // delete Teacher
 Route::get('/teacher_delete/{teacher_id}', 'TeacherController@deleteTeacher');
+// view  Teacher
+Route::get('/viewteacher/{teacher_id}', 'TeacherController@viewteacher');
+// edit student
+Route::get('/edit_teacher/{teacher_id}', 'TeacherController@editteacher');
+//update  student
+Route::post('/update_teacher/{teacher_id}', 'TeacherController@updateteacher');
+
+
+
+
+
+
 
 
 
@@ -85,10 +110,24 @@ Route::get('/delete_exam/{exam_id}', 'SETEXAMController@deleteexam');
 
 // course add 
 Route::get('/cse', 'CSEController@CSE');
+//delete  course
+Route::get('/deletecse/{student_id}', 'CSEController@delete_cse');
+
 Route::get('/eee', 'EEEController@EEE');
+//delete  course
+Route::get('/deleteeee/{student_id}', 'EEEController@delete_eee');
+
 Route::get('/bba', 'BBAController@BBA');
+//delete  course
+Route::get('/deletebba/{student_id}', 'BBAController@delete_bba');
+
 Route::get('/mba', 'MBAController@MBA');
+//delete  course
+Route::get('/deletemba/{student_id}', 'MBAController@delete_mba');
+
 Route::get('/se',  'SEController@SE');
+//delete  course
+Route::get('/deletese/{student_id}', 'SEController@delete_se');
 
 
 // library 
@@ -103,6 +142,8 @@ Route::get('/issue_book', 'BookIssueController@issuebook');
 Route::get('/issued_book', 'BookIssueController@issuedbook');
 // return book
 Route::get('/return_book', 'BookIssueController@returnbook');
+//delete book
+Route::get('/deletebook/{id}', 'BookIssueController@delete_book');
 
 
 

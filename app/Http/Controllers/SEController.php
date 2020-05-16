@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class SEController extends Controller
 {
@@ -26,4 +27,20 @@ class SEController extends Controller
         
  
      }
+
+    // delete
+     public function delete_se($student_id){
+
+    
+      DB::table('students_tbl')
+                   ->where('student_id',  $student_id)
+                    ->delete();
+
+        return Redirect::to('/se');      
+
+ }
+
+
+
+
 }

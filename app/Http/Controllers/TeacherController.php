@@ -136,11 +136,101 @@ class TeacherController extends Controller
 
      }
 
-
-
-
-
    }
+
+  // teacher view are here 
+ public function viewteacher($teacher_id){
+
+    
+  $teacher_info_view=DB::table('Teachers_tbl')
+                  ->select('*')
+                ->where('teacher_id', $teacher_id)
+                ->first();
+
+
+        // $manage_teacher_view=view('admin.teachers_view')
+        //      ->with('stu_info_view', $teacher_info_view);
+
+        //         return view('layout')
+        //          ->with('admin.teachers_view',$manage_teacher_view);
+
+
+
+        return view('admin.view_teacher', compact('teacher_info_view'));
+
+
+
+
+}
+
+
+
+ // teacher edit are here 
+ public function editteacher($teacher_id){
+
+    
+  $up_teacher=DB::table('Teachers_tbl')
+                  ->select('*')
+                ->where('teacher_id', $teacher_id)
+                ->first();
+
+
+        // $manage_teacher_view=view('admin.teacher_edit')
+        //      ->with('stu_info_view', $teacher_info_view);
+
+        //         return view('layout')
+        //          ->with('admin.teacher_edit',$manage_teacher_view);
+
+
+
+          return view('admin.edit_teacher', compact('up_teacher'));
+
+
+
+
+}
+
+
+
+//update teacher part are here 
+
+
+public function updateteacher(Request $req, $teacher_id){
+
+   
+ $data=array();
+
+ $data['teacher_name']=$req->teacher_name ;
+ $data['teacher_phone']=$req->teacher_phone ;
+ $data['teacher_address']=$req->teacher_address ;
+ $data['teacher_department']=$req->teacher_department ;
+
+
+
+        DB::table('teachers_tbl')
+           ->where('teacher_id', $teacher_id)
+           ->update($data);
+           
+           
+           Session::put('exception', 'teacher update successfully');
+           return Redirect::to('/allteacher');
+
+    
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 }

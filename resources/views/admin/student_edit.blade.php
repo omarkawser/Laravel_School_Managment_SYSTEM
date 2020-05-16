@@ -8,7 +8,7 @@
 <div class="col-12 col-lg-6 grid-margin">
                   <div class="card">
                       <div class="card-body">
-                          <h2 class="card-title">Add Student</h2>
+                          <h2 class="card-title"> Update Student :</h2>
 
                           <pclass="alert-danger">  
                           
@@ -23,6 +23,7 @@
                             }
                           
                           ?>
+                          
                           
                           </p>
 

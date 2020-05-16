@@ -56,8 +56,8 @@
                           
                           
                           <td>
-                          <a href="{{URL::to('/viewteacher/'.$view_teacher->teacher_id )}}">  <button class="btn btn-outline-primary">View</button></a>
-                         <a href="{{URL::to('/edit_teacher/'.$view_teacher->teacher_id )}}">  <button class="btn btn-outline-warning">Update</button> </a> 
+                          <a href="{{URL::to('/viewteacher/'.$view_teacher->teacher_id)}}">  <button class="btn btn-outline-primary">View</button></a>
+                         <a href="{{URL::to('/edit_teacher/'.$view_teacher->teacher_id)}}">  <button class="btn btn-outline-warning">Update</button> </a> 
                           <a href="{{URL::to ('/teacher_delete/'.$view_teacher->teacher_id)}}"  id="delete">  <button class="btn btn-outline-danger">Delete</button> </a>
                           </td> 
                       </tr>

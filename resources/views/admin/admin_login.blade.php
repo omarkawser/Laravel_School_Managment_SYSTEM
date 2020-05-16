@@ -32,18 +32,18 @@
 
 
 
-              <form   method="post" action="{{url('/adminlogin')}}">
+              <form   method="post" action="{{URL::to('/adminlogin')}}">
 
                 <!-- {{csrf_field()}} -->
                 @csrf
 
                 <div class="form-group">
                   <label>Username or email *</label>
-                  <input type="text" class="form-control p_input" name="admin_email"  placeholder="E-mail">
+                  <input type="text" class="form-control p_input" name="email"  placeholder="E-mail">
                 </div>
                 <div class="form-group">
                   <label>Password *</label>
-                  <input type="text" class="form-control p_input"  name="admin_password"  placeholder="Password">
+                  <input type="password" class="form-control p_input"  name="password"  placeholder="Password">
                 </div>
                 <div class="form-group d-flex align-items-center justify-content-between">
                   <div class="icheck-square">
@@ -55,8 +55,7 @@
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                 </div>
-                
-                <small class="text-center d-block">Don't have an Account?<a href="#"> Sign Up</a></small>
+             
               </form>
             </div>
           </div>

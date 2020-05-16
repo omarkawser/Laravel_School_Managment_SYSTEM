@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class MBAController extends Controller
 {
@@ -28,4 +29,20 @@ class MBAController extends Controller
         
  
      }
+      
+     public function delete_mba($student_id){
+
+    
+          DB::table('students_tbl')
+                       ->where('student_id',  $student_id)
+                        ->delete();
+  
+            return Redirect::to('/mba');      
+  
+     }
+  
+
+
+
+
 }

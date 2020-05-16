@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class EEEController extends Controller
 {
@@ -28,4 +29,21 @@ return view('admin.Course.eee');
         
  
      }
+
+
+     public function delete_eee($student_id){
+
+    
+          DB::table('students_tbl')
+                       ->where('student_id',  $student_id)
+                        ->delete();
+  
+            return Redirect::to('/eee');      
+  
+     }
+
+
+
+  
+
 }

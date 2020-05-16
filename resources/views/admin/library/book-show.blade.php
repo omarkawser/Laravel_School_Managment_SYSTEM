@@ -44,8 +44,13 @@
         <td>{{$v_book->summary}}</td>
        
         <td>{{$v_book->bookshelf}}</td>
-        <td><a href="" class="btn btn-primary text-white ">Edit</a></td>
-        <td><a href = "" class="btn btn-danger text-white ">Delete</a></td>
+
+        <td>
+        <!-- <td><a href="" class="btn btn-primary text-white ">Edit</a></td> -->
+        <a href="{{URL::to ('/deletebook/'.$v_book->id)}}"  id="delete">  <button class="btn btn-outline-danger">Delete</button> </a>
+          
+          </td>
+          
 
       </tr>
       @endforeach 

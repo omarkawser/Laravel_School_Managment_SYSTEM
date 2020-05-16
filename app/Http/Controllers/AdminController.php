@@ -18,14 +18,15 @@ class AdminController extends Controller
 
 
     return view('admin.dashboard');
+
   }
   
     // admin logout
 
        public function logout(){
 
-          Session::put('admin_name', null);
-          Session::put('admin_id', null);
+          Session::put('name', null);
+          Session::put('id', null);
          
         return  Redirect::to('/backend');
        }
@@ -34,42 +35,39 @@ class AdminController extends Controller
 
     //  admin login  
 
-    public function login_dashboard(Request $request){
+    public function login_dashboard (Request $req){
 
 
-//  $email=$request->admin_email;
-//     $password=md5($request->admin_password);
-//    $result=DB::table('admin')
-//    ->where('admin_email', $email)
-//    ->where('admin_password', $password)
-//   ->first();
-  
-
-//   if($result){
+        $email=$req->email;
+        $password=$req->password;
+            $result=DB::table('admins')
+         ->where('email', $email)
+          ->where('password', $password)
+          ->first();
 
 
-      
-    // Session::put('admin_email',$result->admin_email);
-    //  Session::put('admin_id', $result->admin_id);
-      return Redirect::to('admin_dashboard');
-   
+          if($result){
+        
+        
+            Session::put('email',$result->email);
+            Session::put('id', $result->id);
+            return Redirect::to('/admin_dashboard');
+               
+            
+              }
+            
+            else{
+            
+                return Redirect::to('/backend');
+           }
+         
+        
 
-     
-  // }
-
-  //  else{
-
-  //      return Redirect::to('/backend');
-
-  //   }
-  
        
 
+ }
+
 
 
 }
-
-}
-
-
 
